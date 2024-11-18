@@ -22,11 +22,11 @@ def preprocess_images(contents):
 
     # OpenCV로 이미지 읽기
     np_array = np.frombuffer(decoded, np.uint8)
-    image = cv2.imdecode(np_array, cv2.IMREAD_COLOR)  # 이미지를 BGR 포맷으로 읽기
+    image = cv2.imdecode(np_array, cv2.IMREAD_COLOR)
 
     # 이미지 크기 조정 및 색상 변환
-    image = cv2.resize(image, (IMAGE_SIZE, IMAGE_SIZE))  # 크기 조정
-    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)  # BGR -> RGB 변환
+    image = cv2.resize(image, (IMAGE_SIZE, IMAGE_SIZE)) 
+    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB) 
 
     # Preprocessing 적용
     image = preprocessing_func(image)

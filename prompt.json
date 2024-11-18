@@ -1,7 +1,0 @@
-{
-    "_type": "prompt",
-    "template": "{food}",
-    "input_variables":[
-        "food"
-    ]
-}

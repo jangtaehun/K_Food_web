@@ -2,11 +2,9 @@ from langchain.chat_models import ChatOpenAI
 from langchain.callbacks import StreamingStdOutCallbackHandler
 from langchain.prompts.few_shot import FewShotChatMessagePromptTemplate
 from langchain.prompts import ChatPromptTemplate
-from langchain.prompts import load_prompt
+import os
 
-# prompt = load_prompt("./prompt.json")
 chat = ChatOpenAI(temperature=0.1, streaming=True, callbacks=[StreamingStdOutCallbackHandler()])
-
 
 
 examples = [
