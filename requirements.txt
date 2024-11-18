@@ -241,3 +241,4 @@ zipp==3.16.2
 dash==2.18.2
 tensorflow==2.16.1
 pillow==10.3.0
+gunicorn==23.0.0
