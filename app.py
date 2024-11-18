@@ -24,6 +24,7 @@ stylesheets = [
     ]
 
 app = Dash(__name__, external_stylesheets=stylesheets)
+server = app.server
 
 app.layout = html.Div(
     style={
@@ -266,9 +267,7 @@ def update_output(contents):
 
 
 if __name__ == "__main__":
-    # app.run_server(debug=True)
-    port = int(os.environ.get("PORT", 8080))
-    app.run_server(debug=False, host="0.0.0.0", port=port)
+    app.run_server(debug=True)
 
 
 
