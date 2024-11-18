@@ -7,7 +7,7 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.applications.efficientnet import preprocess_input as eff_preprocess_input
 from predict_func_single import preprocess_images
 from food_explanation import chain
-
+import os
 
 IMAGE_SIZE = 300 
 BATCH_SIZE = 32
@@ -267,7 +267,8 @@ def update_output(contents):
 
 if __name__ == "__main__":
     # app.run_server(debug=True)
-    app.run_server(debug=False, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
+    port = int(os.environ.get("PORT", 8080))
+    app.run_server(debug=False, host="0.0.0.0", port=port)
 
 
 
